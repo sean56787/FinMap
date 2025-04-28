@@ -1,0 +1,143 @@
+<h2 class="text-center m-4 fs-1 text-white">全球主要股市指數</h2>
+<div class="container-fluid mb-3 text-center">
+  <button class="btn btn-primary btn-lg" onclick="getTGSI()">
+    <i class="fas fa-sync-alt"></i> 重整頁面
+  </button>
+</div>
+<div class="row">
+  <div class="col-md-4 d-flex flex-column">
+    <h4 class="text-center cnt1" style="font-weight:700;font-size:40px;">CN</h4>
+    <div class="border border-3 flex-fill flex-column justify-content-center align-items-center myp1" >
+      <div class="d-flex justify-content-center fs-3 mb-2 mt-2 cnt1">上證指數</div>
+      <div class="d-flex flex-column flex-wrap align-content-center">
+        <div class="d-flex flex-row text-white fs-6 mb-2">💵現價: <span class=" fs-6 ms-3" id="cs1_regularMarketPrice">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">💹漲跌: <span class=" fs-6 ms-3" id="cs1_regularMarketChange">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">⚖️漲跌百分比: <span class=" fs-6 ms-3" id="cs1_regularMarketChangePercent">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">🟢開盤價: <span class=" fs-6 ms-3" id="cs1_regularMarketOpen">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">🔴收盤價（前一日）: <span class=" fs-6 ms-3" id="cs1_regularMarketPreviousClose">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">☝️當日最高: <span class=" fs-6 ms-3" id="cs1_regularMarketDayHigh">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">👇當日最低: <span class=" fs-6 ms-3" id="cs1_regularMarketDayLow">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⭐成交量: <span class=" fs-6 ms-3" id="cs1_regularMarketVolume">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⏱︎ 最近交易時間: <span class=" fs-6 ms-3" id="cs1_regularMarketTime">---</span> </div> 
+      </div>
+    </div>
+    <div class="border border-3 flex-fill flex-column justify-content-center align-items-center myp1">
+      <div class="d-flex justify-content-center fs-3 mb-2 mt-2 cnt1">深證指數</div>
+      <div class="d-flex flex-column flex-wrap align-content-center">
+        <div class="d-flex flex-row text-white fs-6 mb-2">💵現價: <span class=" fs-6 ms-3" id="cs2_regularMarketPrice">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">💹漲跌: <span class=" fs-6 ms-3" id="cs2_regularMarketChange">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">⚖️漲跌百分比: <span class=" fs-6 ms-3" id="cs2_regularMarketChangePercent">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">🟢開盤價: <span class=" fs-6 ms-3" id="cs2_regularMarketOpen">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">🔴收盤價（前一日）: <span class=" fs-6 ms-3" id="cs2_regularMarketPreviousClose">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">☝️當日最高: <span class=" fs-6 ms-3" id="cs2_regularMarketDayHigh">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">👇當日最低: <span class=" fs-6 ms-3" id="cs2_regularMarketDayLow">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⭐成交量: <span class=" fs-6 ms-3" id="cs2_regularMarketVolume">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⏱︎ 最近交易時間: <span class=" fs-6 ms-3" id="cs2_regularMarketTime">---</span> </div> 
+      </div>
+    </div>
+    <div class="border border-3 flex-fill flex-column justify-content-center align-items-center myp1">
+      <div class="d-flex justify-content-center fs-3 mb-2 mt-2 cnt1">恆生指數</div>
+      <div class="d-flex flex-column flex-wrap align-content-center">
+        <div class="d-flex flex-row text-white fs-6 mb-2">💵現價: <span class=" fs-6 ms-3" id="cs3_regularMarketPrice">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">💹漲跌: <span class=" fs-6 ms-3" id="cs3_regularMarketChange">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">⚖️漲跌百分比: <span class=" fs-6 ms-3" id="cs3_regularMarketChangePercent">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">🟢開盤價: <span class=" fs-6 ms-3" id="cs3_regularMarketOpen">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">🔴收盤價（前一日）: <span class=" fs-6 ms-3" id="cs3_regularMarketPreviousClose">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">☝️當日最高: <span class=" fs-6 ms-3" id="cs3_regularMarketDayHigh">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">👇當日最低: <span class=" fs-6 ms-3" id="cs3_regularMarketDayLow">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⭐成交量: <span class=" fs-6 ms-3" id="cs3_regularMarketVolume">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⏱︎ 最近交易時間: <span class=" fs-6 ms-3" id="cs3_regularMarketTime">---</span> </div> 
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 d-flex flex-column ">
+    <h4 class="text-center" style="color:rgb(66, 184, 66);font-weight:700;font-size:40px;">USA</h4>
+    <div class="border border-3 flex-fill flex-column justify-content-center align-items-center myp1" >
+      <div class="d-flex justify-content-center fs-3 mb-2 mt-2 ust1">標準普爾500指數</div>
+      <div class="d-flex flex-column flex-wrap align-content-center">
+        <div class="d-flex flex-row text-white fs-6 mb-2">💵現價: <span class=" fs-6 ms-3" id="us1_regularMarketPrice">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">💹漲跌: <span class=" fs-6 ms-3" id="us1_regularMarketChange">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">⚖️漲跌百分比: <span class=" fs-6 ms-3" id="us1_regularMarketChangePercent">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">🟢開盤價: <span class=" fs-6 ms-3" id="us1_regularMarketOpen">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">🔴收盤價（前一日）: <span class=" fs-6 ms-3" id="us1_regularMarketPreviousClose">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">☝️當日最高: <span class=" fs-6 ms-3" id="us1_regularMarketDayHigh">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">👇當日最低: <span class=" fs-6 ms-3" id="us1_regularMarketDayLow">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⭐成交量: <span class=" fs-6 ms-3" id="us1_regularMarketVolume">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⏱︎ 最近交易時間: <span class=" fs-6 ms-3" id="us1_regularMarketTime">---</span> </div> 
+      </div>
+    </div>
+    <div class="border border-3 flex-fill flex-column justify-content-center align-items-center myp1">
+      <div class="d-flex justify-content-center fs-3 mb-2 mt-2 ust1">那斯達克綜合指數</div>
+      <div class="d-flex flex-column flex-wrap align-content-center">
+        <div class="d-flex flex-row text-white fs-6 mb-2">💵現價: <span class=" fs-6 ms-3" id="us2_regularMarketPrice">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">💹漲跌: <span class=" fs-6 ms-3" id="us2_regularMarketChange">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">⚖️漲跌百分比: <span class=" fs-6 ms-3" id="us2_regularMarketChangePercent">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">🟢開盤價: <span class=" fs-6 ms-3" id="us2_regularMarketOpen">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">🔴收盤價（前一日）: <span class=" fs-6 ms-3" id="us2_regularMarketPreviousClose">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">☝️當日最高: <span class=" fs-6 ms-3" id="us2_regularMarketDayHigh">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">👇當日最低: <span class=" fs-6 ms-3" id="us2_regularMarketDayLow">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⭐成交量: <span class=" fs-6 ms-3" id="us2_regularMarketVolume">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⏱︎ 最近交易時間: <span class=" fs-6 ms-3" id="us2_regularMarketTime">---</span> </div>  
+      </div>
+    </div>
+    <div class="border border-3 flex-fill flex-column justify-content-center align-items-center myp1">
+      <div class="d-flex justify-content-center fs-3 mb-2 mt-2 ust1">道瓊工業平均指數</div>
+      <div class="d-flex flex-column flex-wrap align-content-center">
+        <div class="d-flex flex-row text-white fs-6 mb-2">💵現價: <span class=" fs-6 ms-3" id="us3_regularMarketPrice">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">💹漲跌: <span class=" fs-6 ms-3" id="us3_regularMarketChange">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">⚖️漲跌百分比: <span class=" fs-6 ms-3" id="us3_regularMarketChangePercent">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">🟢開盤價: <span class=" fs-6 ms-3" id="us3_regularMarketOpen">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">🔴收盤價（前一日）: <span class=" fs-6 ms-3" id="us3_regularMarketPreviousClose">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">☝️當日最高: <span class=" fs-6 ms-3" id="us3_regularMarketDayHigh">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">👇當日最低: <span class=" fs-6 ms-3" id="us3_regularMarketDayLow">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⭐成交量: <span class=" fs-6 ms-3" id="us3_regularMarketVolume">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⏱︎ 最近交易時間: <span class=" fs-6 ms-3" id="us3_regularMarketTime">---</span> </div> 
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 d-flex flex-column">
+    <h4 class="text-center text-primary" style="font-weight:700;font-size:40px;">EU</h4>
+    <div class="border border-3 flex-fill flex-column justify-content-center align-items-center myp1" >
+      <div class="d-flex justify-content-center fs-3 text-primary mb-2 mt-2">英國富時100指數</div>
+      <div class="d-flex flex-column flex-wrap align-content-center">
+        <div class="d-flex flex-row text-white fs-6 mb-2">💵現價: <span class=" fs-6 ms-3" id="es1_regularMarketPrice">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">💹漲跌: <span class=" fs-6 ms-3" id="es1_regularMarketChange">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">⚖️漲跌百分比: <span class=" fs-6 ms-3" id="es1_regularMarketChangePercent">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">🟢開盤價: <span class=" fs-6 ms-3" id="es1_regularMarketOpen">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">🔴收盤價（前一日）: <span class=" fs-6 ms-3" id="es1_regularMarketPreviousClose">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">☝️當日最高: <span class=" fs-6 ms-3" id="es1_regularMarketDayHigh">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">👇當日最低: <span class=" fs-6 ms-3" id="es1_regularMarketDayLow">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⭐成交量: <span class=" fs-6 ms-3" id="es1_regularMarketVolume">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⏱︎ 最近交易時間: <span class=" fs-6 ms-3" id="es1_regularMarketTime">---</span> </div> 
+      </div>
+    </div>
+    <div class="border border-3 flex-fill flex-column justify-content-center align-items-center myp1">
+      <div class="d-flex justify-content-center fs-3 text-primary mb-2 mt-2">德國DAX指數</div>
+      <div class="d-flex flex-column flex-wrap align-content-center">
+        <div class="d-flex flex-row text-white fs-6 mb-2">💵現價: <span class=" fs-6 ms-3" id="es2_regularMarketPrice">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">💹漲跌: <span class=" fs-6 ms-3" id="es2_regularMarketChange">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">⚖️漲跌百分比: <span class=" fs-6 ms-3" id="es2_regularMarketChangePercent">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">🟢開盤價: <span class=" fs-6 ms-3" id="es2_regularMarketOpen">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">🔴收盤價（前一日）: <span class=" fs-6 ms-3" id="es2_regularMarketPreviousClose">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">☝️當日最高: <span class=" fs-6 ms-3" id="es2_regularMarketDayHigh">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">👇當日最低: <span class=" fs-6 ms-3" id="es2_regularMarketDayLow">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⭐成交量: <span class=" fs-6 ms-3" id="es2_regularMarketVolume">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⏱︎ 最近交易時間: <span class=" fs-6 ms-3" id="es2_regularMarketTime">---</span> </div> 
+      </div>
+    </div>
+    <div class="border border-3 flex-fill flex-column justify-content-center align-items-center myp1">
+      <div class="d-flex justify-content-center fs-3 text-primary mb-2 mt-2">法國CAC40指數</div>
+      <div class="d-flex flex-column flex-wrap align-content-center">
+        <div class="d-flex flex-row text-white fs-6 mb-2">💵現價: <span class=" fs-6 ms-3" id="es3_regularMarketPrice">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">💹漲跌: <span class=" fs-6 ms-3" id="es3_regularMarketChange">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">⚖️漲跌百分比: <span class=" fs-6 ms-3" id="es3_regularMarketChangePercent">---</span> </div>
+        <div class="d-flex flex-row text-white fs-6 mb-2">🟢開盤價: <span class=" fs-6 ms-3" id="es3_regularMarketOpen">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">🔴收盤價（前一日）: <span class=" fs-6 ms-3" id="es3_regularMarketPreviousClose">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">☝️當日最高: <span class=" fs-6 ms-3" id="es3_regularMarketDayHigh">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">👇當日最低: <span class=" fs-6 ms-3" id="es3_regularMarketDayLow">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⭐成交量: <span class=" fs-6 ms-3" id="es3_regularMarketVolume">---</span> </div> 
+        <div class="d-flex flex-row text-white fs-6 mb-2">⏱︎ 最近交易時間: <span class=" fs-6 ms-3" id="es3_regularMarketTime">---</span> </div> 
+      </div>
+    </div>
+  </div>
+</div>
