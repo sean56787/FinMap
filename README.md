@@ -22,6 +22,12 @@
 | https://techcrunch.com/ | TechCrunch 新聞網(提供即時新聞API) |
 | https://www.wsj.com/ | 華爾街日報(提供即時新聞API) |
 
+## 前置作業
+| 說明 | 動作 |
+|------|------|
+| 開啟 Node.js Server | 在 FinMap 專案下使用指令 `node server.js` |
+| 如要使用登入系統，須先建立資料庫 `finmap_db` | 資料表格式為 `CREATE TABLE users ( id INT AUTO_INCREMENT PRIMARY KEY, account VARCHAR(255) NOT NULL UNIQUE,password VARCHAR(255) NOT NULL);` |
+
 # 各頁面介紹
 
 ## 🌎全球主要股市指數
@@ -30,7 +36,6 @@
 | 顯示中國、美國、歐洲三大重要指數的即時現價 |
 
 ![全球主要股市指數](https://github.com/sean56787/FinMap/blob/main/demo_img/TGSI.png)
-
 
 
 ## 🪙及時匯率轉換
