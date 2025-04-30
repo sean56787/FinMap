@@ -22,7 +22,7 @@
 | https://techcrunch.com/ | TechCrunch 新聞網(提供即時新聞API) |
 | https://www.wsj.com/ | 華爾街日報(提供即時新聞API) |
 
-## 前置作業
+## 🛠️前置作業
 | 說明 | 動作 |
 |------|------|
 | 開啟 Node.js Server | 在 FinMap 專案下使用指令 `node server.js` |
