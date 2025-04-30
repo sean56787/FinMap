@@ -106,6 +106,7 @@ function userRegist(){
 }
 
 function userLogin(){
+  $('#serverinfo_Member').addClass('d-none');
   const acnt = $('#acnt').val();
   const pwd = $('#pwd').val();
   if(!acnt || !pwd){
@@ -124,6 +125,9 @@ function userLogin(){
       loadPage('member');
     },
     error: function(err) {
+      if(err.status == 0){
+        $('#serverinfo_Member').removeClass('d-none');
+      }
       if(err.status == 421){
         alert(`無可用資料庫: ${err.responseText}`);
       }
@@ -141,6 +145,7 @@ function userLogin(){
 }
 
 function convertRate(){
+  $('#serverinfo_Forex').addClass('d-none');
   const fromC = $('#fromCurrency').val();
   const toC = $('#toCurrency').val();
   
@@ -156,12 +161,15 @@ function convertRate(){
       $(`#Result`).val((amount * rate).toFixed(3));
     },
     error: function(err) {
-      alert(JSON.stringify(err));
+      if(err.status == 0){
+        $('#serverinfo_Forex').removeClass('d-none');
+      }
     }
   })
 }
 
 function getTGSI(){
+  $('#serverinfo_Stock').addClass('d-none');
   const dict = [
     { symbol: '000001.SS', id: 'cs1' },
     { symbol: '399001.SZ', id: 'cs2' },
@@ -191,9 +199,11 @@ function getTGSI(){
         $(`#${id}_regularMarketTime`).text(new Date(response.regularMarketTime).toLocaleString());
       },
       error: function(err) {
-        console.error('Error:', JSON.stringify(err));
+        if(err.status == 0){
+          $('#serverinfo_Stock').removeClass('d-none');
+        }
       }
-    });
+    });    
   });
 }
 
