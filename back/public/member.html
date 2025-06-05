@@ -1,0 +1,29 @@
+<h2 class="text-center m-4 fs-1 text-white" id="memberTitle">會員註冊/登入</h2>
+<div class="container-fluid mb-3 text-center mt-3 mb-3">
+  <span class="fs-3 text-danger d-none" id="serverinfo_Member">請先開啟 node.js server, 指令為: node server.js</span>
+</div>
+
+<div class="row justify-content-center myp2" id="loginForm">
+    <div class="col-md-6">
+        <div class="border p-4">
+            <div class="mb-1">
+                <label class="mb-1" for="acnt">帳號:</label>
+                <input class="form-control rounded mb-2" type="text" id="acnt" name="acnt" placeholder="email or name">
+              </div>
+              <div class="mb-1">
+                <label class="mb-1" for="pwd">密碼:</label>
+                <input class="form-control rounded mb-2" type="password" id="pwd" name="pwd" placeholder="password">
+              </div>
+              <div class="">
+                <button class="btn btn-primary mt-3" id="Regist" onclick="userRegist()">註冊</button>
+                <button class="btn btn-info mt-3 ms-2" id="Login" onclick="userLogin()">登入</button>
+              </div>
+        </div>
+    </div>
+</div>
+<div id="userInfo" class="d-flex flex-column justify-content-center align-items-center myp2 mb-3 d-none">
+    <h1 class="mb-3 text-success">HI !</h1>
+    <span id="userName" class="mb-3 fs-1 text-success">User</span>
+    <span class="mb-3">你已登入</span>
+    <button class="btn btn-secondary mt-3 ms-2" id="Logout" onclick="logOut()">登出</button>
+  </div>

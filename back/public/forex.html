@@ -1,0 +1,41 @@
+<h2 class="text-center m-4 fs-1 text-white">及時匯率轉換</h2>
+<div class="container-fluid mb-3 text-center mt-3 mb-3">
+  <span class="fs-3 text-danger d-none" id="serverinfo_Forex">請先開啟 node.js server, 指令為: node server.js</span>
+</div>
+  <div class="row justify-content-center myp2">
+    <div class="col-md-6">
+      <div class="border p-4">
+        <div class="mb-1">
+          <label for="fromCurrency">From:</label>
+          <select id="fromCurrency" class="form-select fs-5 myp3" style="background-color: lightblue;">
+            <option value="USD">美元(USD)</option>
+            <option value="EUR">歐元(EUR)</option>
+            <option value="JPY">日圓(JPY)</option>
+            <option value="TWD">新台幣(TWD)</option>
+            <option value="CNY">人民幣(CNY)</option>
+          </select>
+        </div>
+        <div>
+          <input class="form-control rounded mb-2" type="number" id="ipFromCurrency" name="ipFromCurrency" placeholder="金額" value="1">
+        </div>
+        <div class="mb-1">
+          <label for="toCurrency">To:</label>
+          <select id="toCurrency" class="form-select fs-5 mb-5 myp3" style="background-color: rgb(240, 190, 157);">
+            <option value="TWD">新台幣(TWD)</option>
+            <option value="CNY">人民幣(CNY)</option>
+            <option value="USD">美元(USD)</option>
+            <option value="EUR">歐元(EUR)</option>
+            <option value="JPY">日圓(JPY)</option>
+          </select>
+        </div>
+        
+        <div class="mb-1">
+          <label for="toCurrency">Result:</label>
+          <input class="form-control rounded mb-3" type="number" id="Result" name="Result" placeholder="">
+        </div>
+
+        <button class="btn btn-primary mt-3" onclick="convertRate()">兌換</button>
+        <div id="exchangeResult" class="mt-3"></div>
+      </div>
+    </div>
+  </div>
