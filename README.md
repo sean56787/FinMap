@@ -25,7 +25,7 @@
 ## 🛠️前置作業
 | 說明 | 動作 |
 |------|------|
-| 開啟 Node.js Server | 在 FinMap 專案下使用指令 `node server.js` |
+| 開啟 Node.js Server | 在 FinMap/back 下使用指令 `node server.js` |
 | 如要使用登入系統，須先建立資料庫 `finmap_db` | 資料表格式為 `CREATE TABLE users ( id INT AUTO_INCREMENT PRIMARY KEY, account VARCHAR(255) NOT NULL UNIQUE,password VARCHAR(255) NOT NULL);` |
 
 # 各頁面介紹
