@@ -47,6 +47,17 @@
 
 
 
+## ☕熱門國際新聞
+| 說明 |
+|------|
+| 提供目前最新的熱門話題及新聞，此部分需要登入解鎖|
+
+![登入後解鎖](https://github.com/sean56787/FinMap/blob/main/demo_img/news_locked.png)
+![新聞1](https://github.com/sean56787/FinMap/blob/main/demo_img/NEWS01.png)
+![新聞2](https://github.com/sean56787/FinMap/blob/main/demo_img/NEWS02.png)
+![新聞3](https://github.com/sean56787/FinMap/blob/main/demo_img/NEWS03.png)
+
+
 ## 👤使用者註冊/登入
 | 說明 |
 |------|
@@ -56,16 +67,5 @@
 
 ![使用者註冊/登入2](https://github.com/sean56787/FinMap/blob/main/demo_img/login02.png)
 
-
-
-## ☕熱門國際新聞
-| 說明 |
-|------|
-| 提供前最新熱門話題及新聞，此部分需要登入解鎖|
-
-![登入後解鎖](https://github.com/sean56787/FinMap/blob/main/demo_img/news_locked.png)
-![新聞1](https://github.com/sean56787/FinMap/blob/main/demo_img/NEWS01.png)
-![新聞2](https://github.com/sean56787/FinMap/blob/main/demo_img/NEWS02.png)
-![新聞3](https://github.com/sean56787/FinMap/blob/main/demo_img/NEWS03.png)
 
 
